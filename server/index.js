@@ -15,6 +15,7 @@ app.use('/api/products', require('./routes/products'));
 app.use('/api/supply', require('./routes/supply'));
 app.use('/api/order_details', require('./routes/orderDetails'));
 app.use('/api/orders', require('./routes/orders'));
+app.use('/api/inventory', require('./routes/inventory'));
 
 //port to run app
 app.listen(process.env.PORT || '3000', () => {

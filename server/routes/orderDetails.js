@@ -45,7 +45,7 @@ router.put('/:order_details_id', (req, res) => {
 	);
 });
 
-//cannot delete as it is used in orders table and in inventory table as well
+//cannot delete as if it is used in orders table and in inventory table as well
 router.delete('/:order_details_id', (req, res) => {
 	let sql = 'DELETE FROM order_details WHERE order_details_id = ?';
 	db.query(sql, [req.params.order_details_id], (err, results) => {

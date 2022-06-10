@@ -51,13 +51,13 @@ router.put('/:supply_id', (req, res) => {
 	);
 });
 
-//CANNOT DELETE AS IT IS NEEDED IN THE INVENTORY TABLE
-// router.delete('/:supply_id', (req, res) => {
-// 	let sql = 'DELETE FROM supply WHERE supply_id = ?';
-// 	db.query(sql, [req.params.supply_id], (err, results) => {
-// 		if (err) throw err;
-// 		res.json(results);
-// 	});
-// });
+// CANNOT DELETE AS IT IS NEEDED IN THE INVENTORY TABLE
+router.delete('/:supply_id', (req, res) => {
+	let sql = 'DELETE FROM supply WHERE supply_id = ?';
+	db.query(sql, [req.params.supply_id], (err, results) => {
+		if (err) throw err;
+		res.json(results);
+	});
+});
 
 module.exports = router;
