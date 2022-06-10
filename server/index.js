@@ -10,8 +10,9 @@ const usersRoute = require('./routes/users');
 const supplierRoute = require('./routes/suppliers');
 //API routes
 app.use('/api/users', usersRoute); //we put the route in /api/users
-app.use('/api/suppliers', supplierRoute); 
+app.use('/api/suppliers', supplierRoute);
 app.use('/api/products', require('./routes/products'));
+app.use('/api/supply', require('./routes/supply'));
 
 //port to run app
 app.listen(process.env.PORT || '3000', () => {
