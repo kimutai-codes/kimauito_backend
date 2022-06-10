@@ -37,7 +37,7 @@ router.put('/:product_name', (req, res) => {
 	db.query(
 		sql,
 		[req.body.product_name, req.body.unit_price, req.params.product_name],
-    //QUESTION how do I update select columns in a r?
+    //QUESTION how do I update select columns in a row?
 		(err, results) => {
 			if (err) throw err;
 			res.json(results);
@@ -45,7 +45,6 @@ router.put('/:product_name', (req, res) => {
 	);
 });
 
-//cannot be deleted because we need to have that datat in the inventory!!
 router.delete('/:product_name', (req, res) => {
 	let sql = 'DELETE FROM products WHERE product_name = ?';
 	db.query(sql, [req.params.product_name], (err, results) => {
