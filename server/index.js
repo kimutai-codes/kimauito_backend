@@ -1,3 +1,4 @@
+require("dotenv-safe").config({ silent: true });
 const express = require('express'); //import express
 const bodyParser = require('body-parser');
 
